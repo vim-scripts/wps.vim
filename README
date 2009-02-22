@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2550
+
+Syntax highlighting for Rockbox WPS (While Playing Screen) definitions. 
+
+The versions here are obsolete; the latest version can now be found in the Rockbox source tree under utils/editors.
+
+Direct links:
+Summary: http://svn.rockbox.org/viewvc.cgi/trunk/utils/editors/wps.vim?view=log
+Latest version: http://svn.rockbox.org/viewvc.cgi/trunk/utils/editors/wps.vim
