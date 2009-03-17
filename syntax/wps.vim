@@ -1,7 +1,11 @@
 " Vim syntax file for Rockbox WPS (While Playing Screen) definitions.
 "
-" Syntax file version: 1.0
+" Syntax file version: 1.1
 " For Rockbox version: 3.1
+"
+" History:
+"   1.0 original release
+"   1.1 added missing %ck
 
 if exists("b:current_syntax")
     finish
@@ -82,7 +86,7 @@ syn match   wpsClockError       "c\a"                   contained
 syn cluster wpsTag              add=wpsClockError
 hi def link wpsClockError       wpsTagError
 
-syn match   wpsClockTag         "c[abdeflmpuwyHIMPSY]"  contained
+syn match   wpsClockTag         "c[abdefklmpuwyHIMPSY]"  contained
 syn cluster wpsTag              add=wpsClockTag
 hi def link wpsClockTag         wpsTag
 
