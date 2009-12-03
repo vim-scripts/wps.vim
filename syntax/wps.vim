@@ -6,6 +6,7 @@
 " History:
 "   1.0 original release
 "   1.1 added missing %ck
+"   1.2 fixes from Tomer Shalev
 
 if exists("b:current_syntax")
     finish
@@ -262,7 +263,7 @@ syn cluster wpsTag              add=wpsSettingError
 hi def link wpsSettingError     wpsTagError
 
 syn match   wpsSettingTag       "St|"he=e-1             contained contains=wpsSep nextgroup=wpsSettingName
-syn match   wpsSettingFile      "[^|]\+|"he=e-1         contained contains=wpsSep
+syn match   wpsSettingName      "[^|]\+|"he=e-1         contained contains=wpsSep
 syn cluster wpsTag              add=wpsSettingTag
 hi def link wpsSettingTag       wpsTag
 hi def link wpsSettingName      wpsSettingArgs
@@ -272,6 +273,16 @@ syn match   wpsPitchTag         "Sp\>"                  contained
 syn cluster wpsTag              add=wpsPitchTag
 hi def link wpsPitchTag         wpsTag
 
+syn match   wpsTranslatedTag    "Sx|"he=e-1             contained contains=wpsSep nextgroup=wpsTranslatedText
+syn match   wpsTranslatedText   "[^|]\+|"he=e-1         contained contains=wpsSep
+syn cluster wpsTag              add=wpsTranslatedTag
+hi def link wpsTranslatedTag    wpsTag
+hi def link wpsTranslatedText   wpsTranslatedArgs
+hi def link wpsTranslatedArgs   wpsArgs
+
+syn match   wpsLangIsRtlTag     "Sr"                    contained
+hi def link wpsLangIsRtlTag     wpsArgs
+syn cluster wpsTag              add=wpsLangIsRTLTag
 
 " %t -- Alternation tags.
 
